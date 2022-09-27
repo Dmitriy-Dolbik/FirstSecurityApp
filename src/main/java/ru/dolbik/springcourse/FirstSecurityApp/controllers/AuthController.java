@@ -40,16 +40,6 @@ public class AuthController {
         this.modelMapper = modelMapper;
         this.authenticationManager = authenticationManager;
     }
-
-   /* @GetMapping("/login")
-    public String loginPage(){
-        return "auth/login";
-    }
-
-    @GetMapping("/registration")
-    public String registrationPage(@ModelAttribute("person") Person person){
-        return "auth/registration";
-    }*/
     @PostMapping("/login")
     public Map<String, String> performLogin(@RequestBody AuthenticationDTO authenticationDTO){
         UsernamePasswordAuthenticationToken authToken =
